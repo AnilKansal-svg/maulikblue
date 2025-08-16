@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif ;
+  margin:0;
+  padding:0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: #333;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: sans-serif;
+  overflow-x:auto;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-header {
+  width: 100%;
+  height: 133px;
+  background-color: #2E67B1; /*blue */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  transition: background-color 0.3s ease;
+  position: relative;
+  border: 0 !important; 
+  width: 100% !important;
+  margin:0;
+}
+
+.main-header:hover {
+  background-color: white;
+}
+
+.main-header:hover .logo img {
+  filter: none; /* Show actual logo */
+}
+
+.main-header:hover .logo img {
+  filter: none; /* Show actual logo */
+}
+
+.main-header:hover .logo img {
+  filter: none; /* show actual logo */
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.main-header:hover .nav-links a {
+  color: #333;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.main-header:hover .hamburger div {
+  background-color: #333;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  animation: fade 20s infinite;
+}
+
+.banner img:nth-child(1) { animation-delay: 0s; }
+.banner img:nth-child(2) { animation-delay: 5s; }
+.banner img:nth-child(3) { animation-delay: 10s; }
+.banner img:nth-child(4) { animation-delay: 15s; }
+
+@keyframes fade {
+  0%, 100% { opacity: 1; z-index: 1; }
+  20%, 80% { opacity: 0; z-index: 0; }
+}
+
+.section {
+  padding: 2em;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.card {
+  padding: 1em;
+  background: white;
+  width:357px;
+  height:205px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateX(10px);
+  background: #e8f0ff;
+}
+
+.btn {
+  margin-top: 1em;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: bac 0.3s ease;
+}
+
+.btn:hover {
+  background: #2E67B1;
+}
+
+.scrolling-wrapper {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .market-card {
+      flex: 0 0 auto;
+      width: 357px;
+      height: 205px;
+      margin-right: 1rem;
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+      border: 1px solid #e5e7eb; 
+      box-sizing: border-box;
+    }
+
+
+    .scroll-container {
+      overflow-x: scroll;
+      white-space: nowrap;
+      margin-bottom: 2rem;
+      padding-bottom: 0.25rem; 
+    }
+
+    .market-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .market-card p {
+      font-size: 0.95rem;
+      line-height: 1.3rem;
+      color: #4B5563;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+
+   .tab-active {
+    background-color: #487ABB;
+    color: white;
+  }
+  .tab-inactive {
+    background-color: white;
+    color: black;
+    border: 1px solid #487ABB;
+  }
+
+  .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    
+
+.footer {
+  border: none;
+  width: 100%;
+  margin:0;
+}

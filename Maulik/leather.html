@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="leather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Leather - Maulik</title>
+</head>
+<body>
+    <header class="banner">
+        <div class="logo">
+            <!-- Replace with your logo -->
+            <img src="pics/MAULIK LOGO WEB 2.svg" alt="Logo" class="logo-image">
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <div class="nav-dropdown">
+              <button class="nav-link dropdown-toggle">Market & Solutions</button>
+              <div class="dropdown-panel">
+                <p class="dropdown-title">Market and Solutions</p>
+                <div class="search-wrapper">
+                  <input type="text" placeholder="Search..." class="dropdown-search" />
+                  <button class="search-btn"><img src="pics/search.png" alt="Search" /></button>
+                </div>
+                <ul class="dropdown-list">
+                  <li><a href="adhesives.html">Adhesives And Sealants</a></li>
+                  <li><a href="agriculture.html">Agriculture</a></li>
+                  <li><a href="construction.html">Construction</a></li>
+                  <li><a href="furniture-wood.html">Furniture & Wood</a></li>
+                  <li><a href="homecare-cleaning.html">Homecare And I&I Cleaning</a></li>
+                  <li><a href="nutrition.html">Nutrition</a></li>
+                  <li><a href="packaging.html">Packaging, Print & Paper</a></li>
+                  <li><a href="paints-coating.html">Paints And Coating</a></li>
+                  <li><a href="personal-care.html">Personal Care And Hygiene</a></li>
+                  <li><a href="pharmaceuticals.html">Pharmaceuticals</a></li>
+                  <li><a href="plastics-rubber.html">Plastics & Rubber</a></li>
+                  <li><a href="leather.html">Textile, Leather And Footwear</a></li>
+                  <li><a href="segments.html">Segments</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="#">Innovation</a>
+            <a href="#">Sustainability</a>
+            <a href="#">News</a>
+        </nav>
+
+        <script>
+          const toggle = document.querySelector('.dropdown-toggle');
+          const panel = document.querySelector('.dropdown-panel');
+          const searchInput = document.querySelector('.dropdown-search');
+        
+          toggle.addEventListener('click', () => {
+            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+          });
+        
+          document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !panel.contains(e.target)) {
+              panel.style.display = 'none';
+            }
+          });
+        
+          searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            document.querySelectorAll('.dropdown-list li').forEach(li => {
+              li.style.display = li.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+            });
+          });
+        </script>
+        
+        
+        <button class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <!-- Replace with your hero image -->
+            <img src="lpics/hero.shoes.png" alt="Hero Image" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Blue Bar Section -->
+    <div class="blue-bar">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span> > </span>
+            <a href="#">Market and Solutions</a>
+            <span> > </span>
+            <a href="leather.html">Textile, Leather and Footwear</a>
+        </div>
+    </div>
+
+    <section class="main-content">
+      <div class="content-wrapper">
+        <h1>Textile, Leather &amp; Footwear Solutions</h1>
+    
+        <p>
+          At MAULIK, we deliver advanced material and chemical solutions across the textile, leather, and footwear value chains. Our expertise spans performance-enhancing footwear materials, sustainable textile auxiliaries, and next-generation soft-touch coatings. Through innovation, process integration, and a strong focus on sustainability, we empower manufacturers to meet evolving market demands in functionality, design, and regulatory compliance.
+        </p>
+    
+        <h2>Footwear Materials</h2>
+        <p>
+          MAULIK has been a trusted partner in the global footwear industry, offering customized high-performance materials engineered for all types of footwear and sole systems. Our advanced polyurethane systems—developed for superior durability, comfort, and design flexibility—enable manufacturers to deliver lightweight, energy-efficient, and ergonomically optimized footwear.
+        </p>
+    
+        <h2>Textile Chemicals</h2>
+        <p>
+          MAULIK has established itself as a reliable partner from fiber to finished fabric. Our comprehensive portfolio of textile auxiliaries and specialty chemicals supports sustainable processing, colorfastness, functional finishes, and performance enhancements across apparel, home textiles, and industrial fabrics.
+        </p>
+    
+        <h2>Leather Solutions</h2>
+        <p>
+          MAULIK develops and commercializes advanced soft-touch coating technologies specifically engineered for highly flexible leather surfaces. Designed for use in footwear, automotive interiors, and premium leather goods, these coatings enhance tactile quality, durability, and aesthetic appeal.
+        </p>
+        <p>
+          Our solutions set new benchmarks in design flexibility, surface customization, and process efficiency—enabling manufacturers to achieve distinctive finishes and superior performance. With a strong focus on innovation and sustainability, MAULIK's coating systems help elevate leather products to meet evolving consumer and industry expectations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Leather Auxiliaries Section -->
+    <section class="auxiliaries-section">
+      <div class="auxiliaries-container">
+        <div class="auxiliaries-image">
+          <img src="lpics/leather.png" alt="Leather Auxiliaries" class="section-image">
+        </div>
+        <div class="auxiliaries-content">
+          <h2>Leather Auxiliaries</h2>
+          <p>Leather auxiliaries are performance-enhancing chemical agents formulated to optimize each stage of leather processing—from beamhouse to finishing. These include surfactants, emulsifiers, degreasers, dispersing agents, wetting agents, fatliquors, and retanning aids designed to ensure uniform penetration, improved chemical reactivity, enhanced softness, and controlled surface finish.</p>
+          <a href="https://cromatex.in/html/Leather.html" class="view-more">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Textile Effects Section -->
+    <section class="textile-effects-section">
+      <div class="textile-effects-container">
+        <div class="textile-effects-content">
+          <h2>Textile Effects</h2>
+          <p>Textile effects are specialized chemical formulations designed to enhance the aesthetic and functional properties of fabrics. Our range includes softeners, water repellents, flame retardants, and antimicrobial treatments that improve fabric performance, durability, and sustainability while meeting the highest industry standards.</p>
+          <a href="https://cromatex.in/html/textile_effects.html" class="view-more">View More</a>
+        </div>
+        <div class="textile-effects-image">
+          <img src="lpics/textile.png" alt="Textile Effects" class="section-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footwears Section -->
+    <section class="auxiliaries-section">
+      <div class="auxiliaries-container">
+        <div class="auxiliaries-image">
+          <img src="lpics/footwear.avif" alt="Leather Auxiliaries" class="section-image">
+        </div>
+        <div class="auxiliaries-content">
+          <h2>Footwear Solutions</h2>
+          <p>MAULIK has been a trusted partner in the global footwear industry, offering customized high-performance materials engineered for all types of footwear and sole systems. Our advanced polyurethane systems—developed for superior durability, comfort, and design flexibility—enable manufacturers to deliver lightweight, energy-efficient, and ergonomically optimized footwear.</p>
+          <a href="#" class="view-more">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-left">
+            <img src="pics/MAULIK LOGO WEB 2.svg" alt="Maulik Logo" class="footer-logo" />
+            <p class="description">Empowering the Planet through<br>Responsible Chemistry.</p>
+          </div>
+      
+          <div class="footer-middle">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Market and Solutions</a></li>
+              <li><a href="#">Innovation</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-right">
+            <h4>Contact</h4>
+            <p class="contact-item">
+              <span class="contact-icon"><img src="pics/mail.svg" alt="Email"></span>
+              <span class="contact-text">admin@maulik.com</span>
+            </p>
+            <p class="contact-item">
+              <span class="contact-icon"><img src="pics/call.svg" alt="Phone"></span>
+              <span class="contact-text">+91 11 4558 3939</span>
+            </p>
+            <p class="contact-item">
+              <span class="contact-icon"><img src="pics/location_on.svg" alt="Location"></span>
+              <span class="contact-text">#407, Aggarwal Prestige Mall<br>
+              Plot No.02, Road No. 44, Pitampura<br>
+              New Delhi - 110 034, India</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><img src="pics/Icons/mdi_linkedin.svg" alt="LinkedIn"></a>
+              <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-facebook.svg" alt="Facebook"></a>
+              <a href="#" class="social-icon"><img src="pics/Icons/lets-icons_insta.svg" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-whatsapp.svg" alt="WhatsApp"></a>
+              <a href="#" class="social-icon"><img src="pics/Icons/prime_twitter.svg" alt="Twitter"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>Copyright by Maulik Specialty Chemicals. 2018. All rights reserved</p>
+          <div class="legal-links">
+            <a href="#">Company Information</a>
+            <a href="#">General Purchasing Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Legal Notice</a>
+          </div>
+        </div>
+      </footer>
+  
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.banner') && window.innerWidth <= 992) {
+                navLinks.style.display = 'none';
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="micro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Microbial - Maulik</title>
+</head>
+<body>
+    <header class="banner">
+        <div class="logo">
+            <!-- Replace with your logo -->
+            <img src="pics/MAULIK LOGO WEB 2.svg" alt="Logo" class="logo-image">
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <div class="nav-dropdown">
+              <button class="nav-link dropdown-toggle">Market & Solutions</button>
+              <div class="dropdown-panel">
+                <p class="dropdown-title">Market and Solutions</p>
+                <div class="search-wrapper">
+                  <input type="text" placeholder="Search..." class="dropdown-search" />
+                  <button class="search-btn"><img src="pics/search.png" alt="Search" /></button>
+                </div>
+                <ul class="dropdown-list">
+                  <li><a href="adhesives.html">Adhesives And Sealants</a></li>
+                  <li><a href="agriculture.html">Agriculture</a></li>
+                  <li><a href="construction.html">Construction</a></li>
+                  <li><a href="furniture-wood.html">Furniture & Wood</a></li>
+                  <li><a href="homecare-cleaning.html">Homecare And I&I Cleaning</a></li>
+                  <li><a href="nutrition.html">Nutrition</a></li>
+                  <li><a href="packaging.html">Packaging, Print & Paper</a></li>
+                  <li><a href="paints-coating.html">Paints And Coating</a></li>
+                  <li><a href="personal-care.html">Personal Care And Hygiene</a></li>
+                  <li><a href="pharmaceuticals.html">Pharmaceuticals</a></li>
+                  <li><a href="plastics-rubber.html">Plastics & Rubber</a></li>
+                  <li><a href="leather.html">Textile, Leather And Footwear</a></li>
+                  <li><a href="segments.html">Segments</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="#">Innovation</a>
+            <a href="#">Sustainability</a>
+            <a href="#">News</a>
+        </nav>
+
+        <script>
+          const toggle = document.querySelector('.dropdown-toggle');
+          const panel = document.querySelector('.dropdown-panel');
+          const searchInput = document.querySelector('.dropdown-search');
+        
+          toggle.addEventListener('click', () => {
+            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+          });
+        
+          document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !panel.contains(e.target)) {
+              panel.style.display = 'none';
+            }
+          });
+        
+          searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            document.querySelectorAll('.dropdown-list li').forEach(li => {
+              li.style.display = li.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+            });
+          });
+        </script>
+        
+        
+        <button class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <!-- Replace with your hero image -->
+            <img src="micpics/hero-section.png" alt="Hero Image" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Blue Bar Section -->
+    <div class="blue-bar">
+        <div class="blue-bar-inner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span> > </span>
+                <a href="#">Market and Solutions</a>
+                <span> > </span>
+                <a href="segments.html">Segments</a>
+                <span> > </span>
+                <span class="active">Microbial Control</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="bio-control-section">
+      <h2>Control, Detect and Prevent</h2>
+      <p>
+        If you are seeking high-performance biocides or advanced biocidal formulations, you are in the right place.
+      </p>
+      <p>
+        Leveraging a global network and decades of expertise in microbiology, regulatory compliance, and application technology, we offer localized support through our regional laboratories and regulatory specialists. Our team is committed to providing tailored solutions and technical guidance aligned with industry-specific requirements.
+      </p>
+      <p>
+        Driven by innovation, we continually invest in research and development to deliver next-generation biocidal technologies that meet evolving market demands and stringent regulatory standards.
+      </p>
+    </section>
+    
+
+    <section class="card-section">
+      <div class="pyramid-row row-1">
+        <div class="card">
+          <img src="micpics/crop.png" alt="Crop Protection">
+          <div class="card-body">
+            <h3>Crop Protection</h3>
+            <p>Our Crop Protection division delivers a comprehensive portfolio of high-performance, science-backed solutions designed to meet the evolving needs of the global agriculture industry. Through advanced formulations and proven efficacy, we help growers protect yields, enhance productivity, and ensure sustainable farming outcomes.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="micpics/c&c.png" alt="High Performance Coatings & Composites">
+          <div class="card-body">
+            <h3>High Performance Coatings & Composites</h3>
+            <p>We are an innovative solutions provider of advanced composite materials, engineered to support a diverse spectrum of structural and specialty applications. Our technologies enable high-performance, lightweight, and durable solutions across industries, driving efficiency and design flexibility.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="micpics/material.png" alt="Material Protection">
+          <div class="card-body">
+            <h3>Material Protection</h3>
+            <p>Our Material Protection business offers advanced antimicrobials, corrosion inhibitors, lubricants, and additives that enhance performance and durability. These solutions serve industries such as plastics, textiles, leather, metalworking, and energy, delivering lasting protection and efficiency.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="pyramid-row row-2">
+        <div class="card">
+          <img src="micpics/paints.png" alt="Paints and Coatings">
+          <div class="card-body">
+            <h3>Paints and Coatings</h3>
+            <p>Our portfolio includes advanced solutions for marine antifouling, dry-film protection, plant hygiene, and preservation of paints and plasters. These technologies deliver effective microbial control, enhance durability, and support regulatory compliance across a wide range of industrial and architectural applications.</p>
+            <a href="paint.html">View More →</a>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="micpics/wood.png" alt="Wood Treatment">
+          <div class="card-body">
+            <h3>Wood Treatment</h3>
+            <p>We offer innovative wood treatment and application technologies designed to enhance durability, resist environmental stressors, and extend the lifespan of wood products. Our solutions support sustainable performance across construction, outdoor, and industrial applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  
+      <!-- Footer Section -->
+      <footer class="site-footer">
+          <div class="footer-top">
+            <div class="footer-left">
+              <img src="pics/MAULIK LOGO WEB 2.svg" alt="Maulik Logo" class="footer-logo" />
+              <p class="description">Empowering the Planet through<br>Responsible Chemistry.</p>
+            </div>
+        
+            <div class="footer-middle">
+              <h4>Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Market and Solutions</a></li>
+                <li><a href="#">Innovation</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+        
+            <div class="footer-right">
+              <h4>Contact</h4>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/mail.svg" alt="Email"></span>
+                <span class="contact-text">admin@maulik.com</span>
+              </p>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/call.svg" alt="Phone"></span>
+                <span class="contact-text">+91 11 4558 3939</span>
+              </p>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/location_on.svg" alt="Location"></span>
+                <span class="contact-text">#407, Aggarwal Prestige Mall<br>
+                Plot No.02, Road No. 44, Pitampura<br>
+                New Delhi - 110 034, India</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon"><img src="pics/Icons/mdi_linkedin.svg" alt="LinkedIn"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-facebook.svg" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/lets-icons_insta.svg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/prime_twitter.svg" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="footer-bottom">
+            <p>Copyright by Maulik Specialty Chemicals. 2018. All rights reserved</p>
+            <div class="legal-links">
+              <a href="#">Company Information</a>
+              <a href="#">General Purchasing Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Legal Notice</a>
+            </div>
+          </div>
+        </footer>
+    
+  
+      <script>
+          // Toggle mobile menu
+          const hamburger = document.querySelector('.hamburger');
+          const navLinks = document.querySelector('.nav-links');
+          
+          hamburger.addEventListener('click', () => {
+              navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+              if (!e.target.closest('.banner') && window.innerWidth <= 992) {
+                  navLinks.style.display = 'none';
+              }
+          });
+          
+          // Handle window resize
+          window.addEventListener('resize', () => {
+              if (window.innerWidth > 992) {
+                  navLinks.style.display = 'flex';
+              } else {
+                  navLinks.style.display = 'none';
+              }
+          });
+      </script>
+  </body>
+  </html>

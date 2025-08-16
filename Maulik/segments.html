@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="segments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Segments - Maulik</title>
+</head>
+<body>
+    <header class="banner">
+        <div class="logo">
+            <!-- Replace with your logo -->
+            <img src="pics/MAULIK LOGO WEB 2.svg" alt="Logo" class="logo-image">
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <div class="nav-dropdown">
+              <button class="nav-link dropdown-toggle">Market & Solutions</button>
+              <div class="dropdown-panel">
+                <p class="dropdown-title">Market and Solutions</p>
+                <div class="search-wrapper">
+                  <input type="text" placeholder="Search..." class="dropdown-search" />
+                  <button class="search-btn"><img src="pics/search.png" alt="Search" /></button>
+                </div>
+                <ul class="dropdown-list">
+                  <li><a href="adhesives.html">Adhesives And Sealants</a></li>
+                  <li><a href="agriculture.html">Agriculture</a></li>
+                  <li><a href="construction.html">Construction</a></li>
+                  <li><a href="furniture-wood.html">Furniture & Wood</a></li>
+                  <li><a href="homecare-cleaning.html">Homecare And I&I Cleaning</a></li>
+                  <li><a href="nutrition.html">Nutrition</a></li>
+                  <li><a href="packaging.html">Packaging, Print & Paper</a></li>
+                  <li><a href="paints-coating.html">Paints And Coating</a></li>
+                  <li><a href="personal-care.html">Personal Care And Hygiene</a></li>
+                  <li><a href="pharmaceuticals.html">Pharmaceuticals</a></li>
+                  <li><a href="plastics-rubber.html">Plastics & Rubber</a></li>
+                  <li><a href="leather.html">Textile, Leather And Footwear</a></li>
+                  <li><a href="segments.html">Segments</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="#">Innovation</a>
+            <a href="#">Sustainability</a>
+            <a href="#">News</a>
+        </nav>
+
+        <script>
+          const toggle = document.querySelector('.dropdown-toggle');
+          const panel = document.querySelector('.dropdown-panel');
+          const searchInput = document.querySelector('.dropdown-search');
+        
+          toggle.addEventListener('click', () => {
+            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+          });
+        
+          document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !panel.contains(e.target)) {
+              panel.style.display = 'none';
+            }
+          });
+        
+          searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            document.querySelectorAll('.dropdown-list li').forEach(li => {
+              li.style.display = li.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+            });
+          });
+        </script>
+        
+        
+        <button class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <!-- Replace with your hero image -->
+            <img src="segpics/hero-section.png" alt="Hero Image" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Blue Bar Section -->
+    <div class="blue-bar">
+        <div class="blue-bar-inner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span> > </span>
+                <a href="#">Market and Solutions</a>
+                <span> > </span>
+                <a href="segments.html" class="active">Segments</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="card-section">
+      <div class="card-grid">
+        <!-- CARD 1 -->
+        <div class="card">
+          <img src="segpics/material.png" alt="Material">
+          <div class="card-body">
+            <h3>Material</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 2 -->
+        <div class="card">
+          <img src="segpics/microbial.png" alt="Microbial Control">
+          <div class="card-body">
+            <h3>Microbial Control</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="micro.html">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 3 -->
+        <div class="card">
+          <img src="segpics/agriculture.png" alt="Agricultural Solutions">
+          <div class="card-body">
+            <h3>Agricultural Solutions</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 4 -->
+        <div class="card">
+          <img src="segpics/industry.png" alt="Industrial Solutions">
+          <div class="card-body">
+            <h3>Industrial Solutions</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 5 -->
+        <div class="card">
+          <img src="segpics/nutrition.png" alt="Nutrition and Care">
+          <div class="card-body">
+            <h3>Nutrition and Care</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 6 -->
+        <div class="card">
+          <img src="segpics/surfacetech.png" alt="Surface Technologies">
+          <div class="card-body">
+            <h3>Surface Technologies</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+    
+        <!-- CARD 7 -->
+        <div class="card">
+          <img src="segpics/chemicals.png" alt="Chemicals">
+          <div class="card-body">
+            <h3>Chemicals</h3>
+            <p>MAULIK is a worldwide leading manufacturer of adhesive raw materials. Our water-based polymer dispersions, polymer resins, UV curable systems and our additives offer excellent solutions to produce high-performance adhesives for various applications.</p>
+            <a href="#">View More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
+      <!-- Footer Section -->
+      <footer class="site-footer">
+          <div class="footer-top">
+            <div class="footer-left">
+              <img src="pics/MAULIK LOGO WEB 2.svg" alt="Maulik Logo" class="footer-logo" />
+              <p class="description">Empowering the Planet through<br>Responsible Chemistry.</p>
+            </div>
+        
+            <div class="footer-middle">
+              <h4>Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Market and Solutions</a></li>
+                <li><a href="#">Innovation</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+        
+            <div class="footer-right">
+              <h4>Contact</h4>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/mail.svg" alt="Email"></span>
+                <span class="contact-text">admin@maulik.com</span>
+              </p>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/call.svg" alt="Phone"></span>
+                <span class="contact-text">+91 11 4558 3939</span>
+              </p>
+              <p class="contact-item">
+                <span class="contact-icon"><img src="pics/location_on.svg" alt="Location"></span>
+                <span class="contact-text">#407, Aggarwal Prestige Mall<br>
+                Plot No.02, Road No. 44, Pitampura<br>
+                New Delhi - 110 034, India</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon"><img src="pics/Icons/mdi_linkedin.svg" alt="LinkedIn"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-facebook.svg" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/lets-icons_insta.svg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#" class="social-icon"><img src="pics/Icons/prime_twitter.svg" alt="Twitter"></a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="footer-bottom">
+            <p>Copyright by Maulik Specialty Chemicals. 2018. All rights reserved</p>
+            <div class="legal-links">
+              <a href="#">Company Information</a>
+              <a href="#">General Purchasing Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Legal Notice</a>
+            </div>
+          </div>
+        </footer>
+    
+  
+      <script>
+          // Toggle mobile menu
+          const hamburger = document.querySelector('.hamburger');
+          const navLinks = document.querySelector('.nav-links');
+          
+          hamburger.addEventListener('click', () => {
+              navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+              if (!e.target.closest('.banner') && window.innerWidth <= 992) {
+                  navLinks.style.display = 'none';
+              }
+          });
+          
+          // Handle window resize
+          window.addEventListener('resize', () => {
+              if (window.innerWidth > 992) {
+                  navLinks.style.display = 'flex';
+              } else {
+                  navLinks.style.display = 'none';
+              }
+          });
+      </script>
+  </body>
+  </html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maulik</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    /* Force button styles */
+    .innovation-card .learn-more-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: transparent !important;
+      color: #000000 !important;
+      border: 2px solid #2970C5 !important;
+      height: 39px !important;
+      padding: 0 30px !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      border-radius: 28px !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      position: relative !important;
+      overflow: hidden !important;
+      z-index: 1 !important;
+      box-sizing: border-box !important;
+    }
+    
+    .innovation-card .learn-more-btn::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 0 !important;
+      height: 100% !important;
+      background-color: #2970C5 !important;
+      transition: width 0.3s ease !important;
+      z-index: -1 !important;
+      border-radius: 28px !important;
+    }
+    
+    .innovation-card .learn-more-btn:hover {
+      color: #FFFFFF !important;
+    }
+    
+    .innovation-card .learn-more-btn:hover::before {
+      width: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-banner">
+    <div class="banner-content">
+      <div class="logo-container">
+        <img src="pics/MAULIK LOGO WEB 1.svg" alt="Logo" class="banner-logo">
+      </div>
+      <nav class="banner-nav">
+        <a href="#" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle">Market & Solutions</button>
+            <div class="dropdown-panel">
+              <p class="dropdown-title">Market and Solutions</p>
+              <div class="search-wrapper">
+                <input type="text" placeholder="Search..." class="dropdown-search" />
+                <button class="search-btn"><img src="pics/search.png" alt="Search" /></button>
+              </div>
+              <ul class="dropdown-list">
+                <li><a href="adhesives.html">Adhesives And Sealants</a></li>
+                <li><a href="agriculture.html">Agriculture</a></li>
+                <li><a href="construction.html">Construction</a></li>
+                <li><a href="furniture-wood.html">Furniture & Wood</a></li>
+                <li><a href="homecare-cleaning.html">Homecare And I&I Cleaning</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="packaging.html">Packaging, Print & Paper</a></li>
+                <li><a href="paints-coating.html">Paints And Coating</a></li>
+                <li><a href="personal-care.html">Personal Care And Hygiene</a></li>
+                <li><a href="pharmaceuticals.html">Pharmaceuticals</a></li>
+                <li><a href="plastics-rubber.html">Plastics & Rubber</a></li>
+                <li><a href="leather.html">Textile, Leather And Footwear</a></li>
+                <li><a href="segments.html">Segments</a></li>
+              </ul>
+            </div>
+          </div>
+        <a href="#" class="nav-link">Innovation</a>
+        <a href="#" class="nav-link">Sustainability</a>
+        <a href="#" class="nav-link">News</a>
+      </nav>
+      <script>
+  const toggle = document.querySelector('.dropdown-toggle');
+  const panel = document.querySelector('.dropdown-panel');
+  const searchInput = document.querySelector('.dropdown-search');
+
+  toggle.addEventListener('click', () => {
+    panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !panel.contains(e.target)) {
+      panel.style.display = 'none';
+    }
+  });
+
+  searchInput.addEventListener('input', () => {
+    const filter = searchInput.value.toLowerCase();
+    document.querySelectorAll('.dropdown-list li').forEach(li => {
+      li.style.display = li.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+    });
+  });
+</script>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+<section class="hero-banner">
+  <h1 class="hero-heading">Greater Chemistry For A Better Tomorrow</h1>
+  <img src="pics/Frame 110.png" alt="Hero Banner" class="hero-image">
+</section>
+
+<div class="carousel-wrapper">
+  <div class="carousel-slot"><img src="pics/Rotatingpic/1S1P.png" alt="Carousel 1" class="carousel-image" id="carousel-img-1"></div>
+  <div class="carousel-slot"><img src="pics/Rotatingpic/2S1P.png" alt="Carousel 2" class="carousel-image" id="carousel-img-2"></div>
+  <div class="carousel-slot"><img src="pics/Rotatingpic/3S1P.png" alt="Carousel 3" class="carousel-image" id="carousel-img-3"></div>
+</div>
+
+<script>
+// 3 independent carousels, each with 5 images
+const carouselSets = [
+  [
+    'pics/Rotatingpic/1S1P.png',
+    'pics/Rotatingpic/1S2P.png',
+    'pics/Rotatingpic/1S3P.png',
+    'pics/Rotatingpic/1S4P.png',
+    'pics/Rotatingpic/1S5P.png'
+  ],
+  [
+    'pics/Rotatingpic/2S1P.png',
+    'pics/Rotatingpic/2S2P.png',
+    'pics/Rotatingpic/2S3P.png',
+    'pics/Rotatingpic/2S4P.png',
+    'pics/Rotatingpic/2S5P.png'
+  ],
+  [
+    'pics/Rotatingpic/3S1P.png',
+    'pics/Rotatingpic/3S2P.png',
+    'pics/Rotatingpic/3S3P.png',
+    'pics/Rotatingpic/3S4P.png',
+    'pics/Rotatingpic/3S5P.png'
+  ]
+];
+let carouselIndices = [0, 0, 0];
+
+function updateCarousels() {
+  for (let i = 0; i < 3; i++) {
+    const img = document.getElementById(`carousel-img-${i+1}`);
+    img.src = carouselSets[i][carouselIndices[i]];
+  }
+}
+
+function nextCarousels() {
+  for (let i = 0; i < 3; i++) {
+    carouselIndices[i] = (carouselIndices[i] + 1) % carouselSets[i].length;
+  }
+  updateCarousels();
+}
+
+setInterval(nextCarousels, 3000);
+// Initial render
+updateCarousels();
+</script>
+
+<div class="section-container">
+    <div class="text-content">
+      <div class="yellow-circle">
+        Exceptional,<br> High-Quality<br> Chemicals &<br> Polymers
+      </div>
+      <div class="heading">Innovative &<br> Cutting-Edge<br> Material Solutions</div>
+      <div class="paragraph">
+        Through advanced material innovations and circular recycling technologies, MAULIK is committed to enabling a cleaner, more sustainable future—delivering long-term environmental and societal value for future generations.
+      </div>
+      <button class="cta-button">New Products →</button>
+    </div>
+
+    <div class="image-container">
+      <div class="big-circle">
+        <img src="pics/Group 24.png" alt="Big Circle Image">
+      </div>
+      <div class="small-circle">
+        <img src="pics/Mask group.png" alt="Small Circle Image">
+      </div>
+    </div>
+  </div>
+
+<!-- Gray Bar Section with Toggle Buttons -->
+<div class="gray-bar-section">
+  <div class="gray-bar">
+    <button class="toggle-btn active" id="marketsBtn">Markets</button>
+    <button class="toggle-btn" id="segmentsBtn">Segments</button>
+  </div>
+</div>
+
+<!-- Markets Cards Grid -->
+<div class="markets-grid" id="marketsGrid">
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/tape.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Adhesive and Sealants</div>
+      <p class="card-desc">At MAULIK, whether serving construction, automotive, packaging, or other industries, our adhesive and sealant technologies reflect our commitment to sustainable materials innovation...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/agriculture.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Agriculture</div>
+      <p class="card-desc">Agriculture is evolving rapidly, driven by growing demands for food security, sustainable land use, and environmental responsibility. At MAULIK, we combine over a century of agricultural expertise...
+      </p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/bulldozer.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Construction</div>
+      <p class="card-desc">At MAULIK, we don’t just supply materials—we engineer performance-driven solutions. We partner with construction professionals to advance sustainable building practices...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/wood.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Furniture & Wood</div>
+      <p class="card-desc">In the competitive global market, manufacturers in the furniture and wood processing industry demand more than just performance—they seek smart, efficient, and cost-effective solutions that enhance productivity...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/mop.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Housecare And I&I</div>
+      <p class="card-desc">At MAULIK, we leverage our deep expertise in high-performance chemistry to deliver advanced solutions that make home care and industrial & institutional (I&I) cleaning more effective, efficient, and resource-conscious...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/carrot.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Nutrition</div>
+      <p class="card-desc">As the global population approaches 9 billion by 2050, the agri-food industry faces a critical challenge: increasing output while minimizing the use of finite natural resources...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/delivery.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Packaging, Print and Paper</div>
+      <p class="card-desc">From extending product shelf life to enhancing visual appeal and optimizing material efficiency, MAULIKunderstands the complex requirements of the packaging and paper value chain...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/paint.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Paints and Coating </div>
+      <p class="card-desc">At MAULIK, we empower paints and coatings manufacturers with innovative, high-performance raw materials that support both functional excellence and sustainability...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/hygiene.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Hygiene</div>
+      <p class="card-desc">At MAULIK, we deliver scientifically advanced and market-responsive ingredient solutions for the personal care and hygiene sectors...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/pills.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Pharmaceuticals</div>
+      <p class="card-desc">At MAULIK, we deliver high-quality excipients, active ingredients, and pharmaceutical-grade raw materials designed to meet the complex demands of modern drug formulation and manufacturing...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/Group 31.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Plastics and Rubber</div>
+      <p class="card-desc">At MAULIK, we lead the way in delivering high-performance, lightweight materials engineered to meet the evolving demands of modern industries...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+  <div class="market-card">
+  <div class="card-header">
+    <img src="pics/markets/clothesline.svg" alt="Logo" class="card-logo">
+    <div class="card-header-content">
+      <div class="card-title">Textile, Leather and Footwear</div>
+      <p class="card-desc">At MAULIK, we deliver advanced material and chemical solutions across the textile, leather, and footwear value chains...</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="leather.html" class="learn-more">Learn More</a>
+  </div>
+</div>
+</div>
+
+<div class="segments-grid" id="segmentsGrid" style="display: none;">
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/science.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Materials</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/Vector.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Microbial Control</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="micro.html" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/Vector-1.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Industrial Solutions</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/tech.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Surface Technologies</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/Vector.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Nutrition and care</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/Group.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Agricultural Solutions</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+  <div class="segment-card">
+    <div class="card-header">
+      <img src="pics/segments/tt.svg" alt="Logo" class="card-logo">
+      <div class="card-header-content">
+        <div class="card-title">Chemicals</div>
+        <p class="card-desc">Basic chemicals including ethylene, propylene, propylene oxide, ethylene oxide, tertiary butyl alcohol, methanol, acetic acid and their derivatives.</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="learn-more">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<!-- Innovation Hub Section -->
+<section class="innovation-hub">
+  <h2 class="section-heading">Innovation Hub</h2>
+  <p class="section-subheading">Advancing the Future of Sustainable Chemistry Through Pioneering Research and Innovation</p>
+  
+  <div class="innovation-cards">
+    <!-- Card 1 -->
+    <div class="innovation-card">
+      <div class="card-icon">
+        <img src="pics/innovationhub/experiment.svg" alt="Innovation Icon 1">
+      </div>
+      <h3 class="card-title">Green Chemistry</h3>
+      <p class="card-description">Green chemistry designs safer, cleaner processes to reduce environmental impact and drive sustainable innovation.</p>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="innovation-card" >
+      <div class="card-icon">
+        <img src="pics/innovationhub/microscope-svgrepo-com 1.svg" alt="Innovation Icon 2">
+      </div>
+      <h3 class="card-title">R&D Exellence</h3> 
+      <p class="card-description">State-of-the-art research facilities driving chemical innovation</p>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="innovation-card" >
+      <div class="card-icon">
+        <img src="pics/innovationhub/atom-svgrepo-com 1.svg" alt="Innovation Icon 3">
+      </div>
+      <h3 class="card-title">Smart Materials</h3>
+      <p class="card-description">Developing next-generation materials for future applications</p>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Sustainability Section -->
+<section class="sustainability-section">
+  <div class="container">
+    <h2 class="section-heading">Sustainability</h2>
+    
+    <div class="sustainability-content">
+      <div class="sustainability-text">
+        <h3 class="sustainability-subheading">Creating a Sustainable Future</h3>
+        <p class="sustainability-description">This approach focuses on designing chemical processes that minimize environmental impact and promote resource efficiency, leading to safer and more sustainable products and processes.</p>
+        
+        <div class="sustainability-cards">
+          <div class="sustainability-card">
+            <div class="card-logo">
+              <img src="pics/Sustainaibility/Vector.svg" alt="Leaf Icon">
+            </div>
+            <div class="card-text">Reduced Carbon Footprint</div>
+          </div>
+          
+          <div class="sustainability-card">
+            <div class="card-logo">
+              <img src="pics/Sustainaibility/Renewable_energy.svg" alt="Renewable Icon">
+            </div>
+            <div class="card-text">Eco-friendly Manufacturing</div>
+          </div>
+          
+          <div class="sustainability-card">
+            <div class="card-logo">
+              <img src="pics/Sustainaibility/recycle-svgrepo-com 1.svg" alt="Recycle Icon">
+            </div>
+            <div class="card-text">Sustainable Sourcing</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sustainability-image">
+        <img src="pics/Sustainability.png" alt="Sustainability at Maulik">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News and Insights Section -->
+<section class="news-section">
+  <h2 class="section-title">News and Insights</h2>
+  <div class="news-container">
+    <!-- Left side with large image -->
+    <div class="news-main">
+      <div class="news-image-large">
+        <img src="pics/Sustainability.png" alt="Main News" width="519" height="391">
+      </div>
+      <div class="news-content">
+        <h3 class="news-heading">Revolutionizing Packaging with Maulik’s Polymer Solution</h3>
+        <p class="news-text">Discover how Maulik innovative polymer solutions are transforming the packaging industry with sustainable, high-performance materials.</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+    </div>
+    
+    <!-- Right side with two smaller news items -->
+    <div class="news-sidebar">
+      <!-- News Item 1 -->
+      <div class="news-item">
+        <div class="news-image-small">
+          <img src="pics/Sustainability.png" alt="Innovation 1" width="302" height="284">
+        </div>
+        <div class="news-details">
+          <h4 class="news-title">The Future of Sustainable Polymers</h4>
+          <p class="news-excerpt">Maulik is leading the charge in developing sustainable polymers that reduce environmental impact while maintaining…</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+      
+      <!-- News Item 2 -->
+      <div class="news-item">
+        <div class="news-image-small">
+          <img src="pics/Sustainability.png" alt="Innovation 2" width="302" height="284">
+        </div>
+        <div class="news-details">
+          <h4 class="news-title">Maulik Role in Advancing Renewable Energy Solutions</h4>
+          <p class="news-excerpt">Discover how Maulik is contributing to the global shift towards renewable energy with innovative materials…</p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <img src="pics/MAULIK LOGO WEB 2.svg" alt="Maulik Logo" class="footer-logo" />
+      <p class="description">Empowering the Planet through<br>Responsible Chemistry.</p>
+    </div>
+
+    <div class="footer-middle">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Market and Solutions</a></li>
+        <li><a href="#">Innovation</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>Contact</h4>
+      <p class="contact-item">
+        <span class="contact-icon"><img src="pics/mail.svg" alt="Email"></span>
+        <span class="contact-text">admin@maulik.com</span>
+      </p>
+      <p class="contact-item">
+        <span class="contact-icon"><img src="pics/call.svg" alt="Phone"></span>
+        <span class="contact-text">+91 11 4558 3939</span>
+      </p>
+      <p class="contact-item">
+        <span class="contact-icon"><img src="pics/location_on.svg" alt="Location"></span>
+        <span class="contact-text">#407, Aggarwal Prestige Mall<br>
+        Plot No.02, Road No. 44, Pitampura<br>
+        New Delhi - 110 034, India</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><img src="pics/Icons/mdi_linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-facebook.svg" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="pics/Icons/lets-icons_insta.svg" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="pics/Icons/ic_baseline-whatsapp.svg" alt="WhatsApp"></a>
+        <a href="#" class="social-icon"><img src="pics/Icons/prime_twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright by Maulik Specialty Chemicals. 2018. All rights reserved</p>
+    <div class="legal-links">
+      <a href="#">Company Information</a>
+      <a href="#">General Purchasing Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Legal Notice</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// Toggle button logic for gray bar
+const marketsBtn = document.getElementById('marketsBtn');
+const segmentsBtn = document.getElementById('segmentsBtn');
+const marketsGrid = document.getElementById('marketsGrid');
+const segmentsGrid = document.getElementById('segmentsGrid');
+
+marketsBtn.addEventListener('click', function() {
+  marketsBtn.classList.add('active');
+  segmentsBtn.classList.remove('active');
+  marketsGrid.style.display = 'grid';
+  segmentsGrid.style.display = 'none';
+});
+segmentsBtn.addEventListener('click', function() {
+  segmentsBtn.classList.add('active');
+  marketsBtn.classList.remove('active');
+  marketsGrid.style.display = 'none';
+  segmentsGrid.style.display = 'grid';
+});
+</script>
+
+<!-- Scroll Animations -->
+<script>
+  // Debug: Check if script loads
+  console.log('Main script running');
+  
+  // Load scroll animations
+  const script = document.createElement('script');
+  script.src = 'js/scroll-animations.js';
+  script.onload = () => console.log('Scroll animations script loaded');
+  script.onerror = () => console.error('Error loading scroll animations');
+  document.body.appendChild(script);
+</script>
+
+</body>
+</html>
